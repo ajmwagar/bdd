@@ -136,11 +136,12 @@ fn main() -> Result<(), std::io::Error> {
     // Wait on threads
     let bytes_read = reader_thread.join().unwrap()?;
 
-    println!("{} bytes copied", bytes_read);
+    println!("{} bytes copied to {} files.", bytes_read, writer_threads.len());
 
     for handle in writer_threads {
         handle.join().unwrap()?;
     }
+
 
     Ok(())
 }
