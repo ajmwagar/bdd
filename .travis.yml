@@ -8,9 +8,9 @@ addons:
 cache:
   cargo: true
 rust:
-  # - nightly
-  - beta
-  - stable
+  - nightly
+  # - beta
+  # - stable
 # matrix:
 #   allow_failures:
 #     - rust: nightly
