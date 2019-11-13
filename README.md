@@ -1,5 +1,5 @@
-# bd
-💾 Bulk Data Duplicator (dd)
+# 💾 bd
+Bulk Data Duplicator (dd)
 
 - Slick CLI interface
 - Burn ISOs to multiple drives in parallel
