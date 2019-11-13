@@ -5,7 +5,10 @@ use bus::Bus;
 
 #[derive(StructOpt, Debug)]
 #[structopt(name = "bd")]
-/// A drop in, parallel dd
+/// Bulk Data Duplicator
+///
+/// Simple interface to write image to many files/devices at once
+/// Can also be used to backup to multiple locations
 struct Opts {
     /// Input file to read from. if left empty STDIN is used.
     #[structopt(short = "i", long = "input", parse(from_os_str))]
@@ -16,12 +19,16 @@ struct Opts {
     output: Option<Vec<PathBuf>>,
 
     #[structopt(short = "b", long = "block-size", default_value = "64000")]
+    /// Set the block size to process data in
     block_size: usize,
 
     #[structopt(short = "f", long = "block-buffer", default_value = "20")]
+    /// Set the amount of blocks to store in memory at a given time. memory usage = (block-buffer * # of output files * block-size)
     block_buffer: usize,
 
     #[structopt(short = "c", long = "count")]
+    /// # of blocks to read, useful for generating random data from /dev/random or zeroing drives
+    /// with /dev/zero
     block_count: Option<usize>
 }
 
