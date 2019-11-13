@@ -28,7 +28,7 @@ version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
-name = "bd"
+name = "bdd"
 version = "0.1.0"
 dependencies = [
  "bus 2.2.2 (registry+https://github.com/rust-lang/crates.io-index)",

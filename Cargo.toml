@@ -1,8 +1,12 @@
 [package]
 name = "bdd"
+description = "Bulk Data Duplicator (bdd)"
+repository = "https://github.com/ajmwagar/bdd"
+readme = "./README.md"
 version = "0.1.0"
-authors = ["Avery Wagar <awagar@cfchildren.org>"]
+authors = ["Avery Wagar <ajmw.subs@gmail.com>"]
 edition = "2018"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
